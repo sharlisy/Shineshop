@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+
+<head>
+    <title>ShineShop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Shineshop</h1>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('Home', event)">HOME</button>
+            <button class="tab-btn" onclick="showTab('produto', event)">PRODUTOS</button>
+            <button class="tab-btn" onclick="showTab('contato', event)">CONTATO</button>
+        </div>
+    </header>
+
+    <!-- HOME -->
+    <div id="Home" class="tab-content" style="display:block;">
+        <h2>Bem-vindo à ShineShop!</h2>
+        <p>Explore nossa coleção incrível 💖</p>
+        <img src="imagem/ShineShop.jpg" style="width:100%; border-radius:10px;">
+    </div>
+
+    <!-- PRODUTOS -->
+    <div id="produto" class="tab-content">
+
+        <h2>Categorias</h2>
+
+        <div class="categorias">
+
+            <div class="categoria">
+                <img src="imagem/roupas.jpg">
+                <a href="#roupas">Ver roupas</a>
+            </div>
+
+            <div class="categoria">
+                <img src="imagem/acessorios.jpg">
+                <a href="#acessorios">Ver acessórios</a>
+            </div>
+
+            <div class="categoria">
+                <img src="imagem/eletronicos.jpg">
+                <a href="#eletronicos">Ver eletrônicos</a>
+            </div>
+
+        </div>
+
+        <!-- SEÇÕES -->
+        <div id="roupas" class="secao">
+            <h3>Roupas 👗</h3>
+            <p>Moda estilosa e confortável para você.</p>
+        </div>
+
+        <div id="acessorios" class="secao">
+            <h3>Acessórios 👜</h3>
+            <p>Detalhes que fazem toda diferença.</p>
+        </div>
+
+        <div id="eletronicos" class="secao">
+            <h3>Eletrônicos 📱</h3>
+            <p>Tecnologia com estilo.</p>
+        </div>
+
+    </div>
+
+    <!-- CONTATO -->
+    <div id="contato" class="tab-content">
+        <h2>Contato</h2>
+        <p>Fale com a gente 💬</p>
+    </div>
+
+    <script>
+        function showTab(tabName, event) {
+            let contents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].style.display = "none";
+            }
+
+            let buttons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            event.target.classList.add("active");
+        }
+    </script>
+</body>

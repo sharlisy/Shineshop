@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #ff4da6;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* BOTÕES */
+.tabs {
+    margin-top: 15px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.tab-btn.active {
+    background-color: black;
+    color: white;
+}
+
+/* CONTEÚDO */
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+/* GRID PRODUTOS */
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.categoria {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.categoria:hover {
+    transform: scale(1.05);
+}
+
+.categoria img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.categoria a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #ff4da6;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
+/* SEÇÕES */
+.secao {
+    margin-top: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
